@@ -20,26 +20,36 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
-
         return true;
     }
 
+// cara pada umumnya, pertama
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        Intent intent;
+//        switch (item.getItemId()) {
+//            case R.id.machine_data:
+//                intent = new Intent(MainActivity.this, MachineDataActivity.class);
+//                startActivity(intent);
+//                break;
+//            case R.id.code_reader:
+//                intent = new Intent(MainActivity.this, CodeReaderActivity.class);
+//                startActivity(intent);
+//                break;
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        Intent intent;
-        switch (item.getItemId()) {
-            case R.id.machine_data:
-                intent = new Intent(MainActivity.this, MachineDataActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.code_reader:
-                intent = new Intent(MainActivity.this, CodeReaderActivity.class);
-                startActivity(intent);
-                break;
-        }
+// cara yang disarankan dari situs android developer, kedua
+    public void machineData(MenuItem item){
+        Intent  intent = new Intent(MainActivity.this, MachineDataActivity.class);
+        startActivity(intent);
+    }
 
-        return super.onOptionsItemSelected(item);
+    public void CodeReader(MenuItem item){
+        Intent intent = new Intent(MainActivity.this, CodeReaderActivity.class);
+                startActivity(intent);
     }
 
 

@@ -36,9 +36,7 @@ public class ListMachineDataAdapter extends BaseAdapter {
 
     public interface ItemClick {
         public void btnEditClicked(int position, MachineModel mm);
-
         public void btnDeleteClicked(int position, MachineModel mm);
-
     }
 
     public void listener(ItemClick listener) {
@@ -83,7 +81,6 @@ public class ListMachineDataAdapter extends BaseAdapter {
                     intent.putExtra(IntenKey.POSITION, position);
                     intent.putParcelableArrayListExtra(IntenKey.MODEL_LIST, arrayList);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
                     context.startActivity(intent);
 
                 }

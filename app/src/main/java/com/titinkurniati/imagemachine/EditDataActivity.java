@@ -1,10 +1,10 @@
 package com.titinkurniati.imagemachine;
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Created by Titin Kurniati on 13-Jun-16.
  */
-public class EditDataActivity extends Activity implements View.OnClickListener{
+public class EditDataActivity extends AppCompatActivity implements View.OnClickListener{
 
     private EditText editText_id;
     private EditText editText_barcode;
@@ -85,9 +85,11 @@ public class EditDataActivity extends Activity implements View.OnClickListener{
         }
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        finish();
+
+    public void showDatePickerDialog(View v) {
+        DatePickerCustom newFragment = new DatePickerCustom();
+        newFragment.setTextView(textView_selected_date);
+        newFragment.show(getSupportFragmentManager(),"datePicker");
     }
+
 }

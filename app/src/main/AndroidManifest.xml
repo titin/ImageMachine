@@ -2,51 +2,53 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.titinkurniati.imagemachine">
 
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:supportsRtl="true"
         android:label="@string/app_name"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-            >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MachineDataActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".CodeReaderActivity"
+
+        <activity
+            android:name=".MachineDataActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".CodeReaderActivity"
             android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".MachineDatadetailActivity"
+        <activity
+            android:name=".MachineDatadetailActivity"
             android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name="CustomGalleryActivity" >
+
+        <activity android:name="CustomGalleryActivity">
             <intent-filter>
-                <action android:name="titinkurniati.ACTION_PICK" />
                 <action android:name="titinkurniati.ACTION_MULTIPLE_PICK" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".FullImageActivity"
-            android:screenOrientation="portrait">
 
-        </activity>
-        <activity android:name=".EditDataActivity"
+        <activity
+            android:name=".FullImageActivity"
             android:screenOrientation="portrait">
-
         </activity>
+
+        <activity
+            android:name=".EditDataActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
         <activity android:name=".FullScreenActivity">
 
         </activity>

@@ -32,12 +32,12 @@ import java.util.Collections;
 
 public class CustomGalleryActivity extends Activity {
 
-	GridView gridGallery;
-	Handler handler;
-	GalleryAdapter adapter;
-	ImageView imgNoMedia;
-	Button btnGalleryOk;
-	String action;
+	private GridView gridGallery;
+	private Handler handler;
+	private GalleryAdapter adapter;
+	private ImageView imgNoMedia;
+	private Button btnGalleryOk;
+	private String action;
 	private ImageLoader imageLoader;
 
 	@Override

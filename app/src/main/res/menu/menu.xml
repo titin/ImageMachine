@@ -5,9 +5,10 @@
     tools:context="com.titinkurniati.imagemachine.MainActivity">
     <item
         android:id="@+id/machine_data"
-        android:title="@string/mhacine_data"/>
+        android:title="@string/mhacine_data"
+        android:onClick="machineData"/>
     <item
         android:id="@+id/code_reader"
         android:title="@string/code_reader"
-        />
+        android:onClick="CodeReader"/>
 </menu>
